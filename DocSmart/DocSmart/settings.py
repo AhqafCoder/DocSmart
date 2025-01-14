@@ -52,12 +52,14 @@ MIDDLEWARE = [
 ROOT_URLCONF = "DocSmart.urls"
 
 import os
+from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "templates")],  # Ensure this points to the templates folder
+        'DIRS': [BASE_DIR / "templates"],  # This should point to your 'templates' directory
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,6 +71,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = "DocSmart.wsgi.application"
 
