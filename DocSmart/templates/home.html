@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChatGPT UI</title>
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/docx.css' %}">
 </head>
 <body>
   <!-- Navbar Section -->
   <nav class="navbar">
     <div class="logo">
-      <img src="Hackathon__1_-removebg-preview.png" alt="Logo">
+      <img src="{% static 'images/logo.png' %}" alt="Logo">
       <span>DocSmart</span>
     </div>
     <ul class="nav-links">
@@ -40,6 +41,6 @@
     </div>
   </div>
 
-  <script src="{% static 'js/scripts.js' %}"></script>
+  <script src="{% static 'js/docx.js' %}"></script>
 </body>
 </html>

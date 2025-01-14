@@ -51,6 +51,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "DocSmart.urls"
 
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+
 import os
 from pathlib import Path
 
