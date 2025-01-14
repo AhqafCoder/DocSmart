@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocSmart</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT UI</title>
+  <link rel="stylesheet" href="docx.css">
 </head>
 <body>
-    <h1>Welcome to DocSmart!</h1>
-    <p>Your smart healthcare platform.</p>
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Hackathon__1_-removebg-preview.png" alt="Logo">
+      <span>DocSmart</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#help">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- Chat UI Section -->
+  <div class="chat-container">
+    <header class="chat-header">
+      <h1>ChatGPT</h1>
+    </header>
+    <div class="chat-window" id="chat-window">
+      <div class="message user-message">
+        <p>Hi, how can I help you today?</p>
+      </div>
+      <div class="message bot-message">
+        <p>I'm looking for information about the ChatGPT UI.</p>
+      </div>
+    </div>
+    <div class="chat-input">
+      <textarea id="user-input" placeholder="Type your message..."></textarea>
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <script src="docx.js"></script>
 </body>
 </html>
