@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatGPT UI</title>
+  <title>DocSmart</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/docx.css' %}">
+  <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
 </head>
 <body>
   <!-- Navbar Section -->
   <nav class="navbar">
     <div class="logo">
+      <a href="/">
       <img src="{% static 'images/logo.png' %}" alt="Logo">
+      </a>
       <span>DocSmart</span>
     </div>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#service">Service</a></li>
       <li><a href="#help">Help</a></li>

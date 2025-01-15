@@ -156,3 +156,7 @@ body, html {
     background-color: #0453b8;
   }
   
+  .logo a img {
+    display: block;
+    max-width: 100px; /* Adjust as needed */
+}
