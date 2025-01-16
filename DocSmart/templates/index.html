@@ -7,11 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+       {% load static %}
        <style>
         /* General Reset */
         * {
             margin: 0;
-            padding: 0;
+            padding:0 ;
             box-sizing: border-box;
         }
 
@@ -19,12 +20,15 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
+           
         }
 
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 4rem;
+
         }
 
         /* Header */
@@ -66,45 +70,43 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 4rem 2rem;
+            padding: 4rem 4rem;
             background-color: #f4f4f4;
            
-
-
         }
 
         .hero-text {
             max-width: 90%;
-            
+            padding: 80px;
 
         }
 
         .hero-text h1 {
-            font-size: 2.7rem;
+            font-size: 3.5rem;
             color: #0033CC;
-            margin-bottom: 1rem;
-            font-family: "Bona Nova SC", serif;
+            margin-bottom: 2rem;
+            font-family: "Kanit", serif;
         }
 
         .hero-text p {
             font-size: 1.2rem;
             color: #555;
-            margin-bottom: 2rem;
+            margin-bottom: 3.5rem;
             font-family: "Libre Baskerville", serif;
           
         }
 
         button {
   position: relative;
-  padding: 12px 35px;
+  padding: 15px 40px;
   background: #1f89e1;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 500;
-  color: #181818;
+  color: #ffffff;
   border: 3px solid #1f89e1;
   border-radius: 8px;
   box-shadow: 0 0 0 #fec1958c;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -254,12 +256,13 @@ button:hover .star-6 {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 4rem 2rem;
+            padding: 6.5rem;
         }
 
         .content-section img {
             max-width: 45%;
             border-radius: 10px;
+         
         }
 
         .content-text {
@@ -268,14 +271,14 @@ button:hover .star-6 {
         }
 
         .content-text h2 {
-            font-size: 2rem;
+            font-size: 4rem;
             color: #0033CC;
             margin-bottom: 1rem;
             font-family: "Bona Nova SC", serif;
         }
 
         .content-text p {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             color: #555;
             font-family: "Libre Baskerville", serif;
         } 
@@ -284,7 +287,7 @@ button:hover .star-6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4rem 2rem;
+    padding:6.5rem;
     flex-direction: row-reverse; 
 
 } 
@@ -340,9 +343,9 @@ button:hover .star-6 {
     <section class="hero">
         <div class="hero-text">
             <h1>Welcome to DocSmart</h1>
-            <p>Your health, simplified. Explore personalized insurance plans crafted for you and your family. Start your journey towards better healthcare today!</p>
+            <p>Gateway to smarter healthcare. Using advanced AI, we connect patients with the right doctors, optimize schedules, and predict delays, ensuring a seamless, efficient, and patient-centered healthcare experience.</p>
             <button>
-                Button
+                Get Started
                 <div class="star-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -459,21 +462,21 @@ button:hover .star-6 {
                 </div>
               </button>
         </div>
-        <img src="Franklyn_HomepageHero_231031_web.png" alt="Healthcare illustration">
+        <img src="{% static 'images/img1.png' %}" alt="Healthcare illustration">
     </section>
 
     <section class="content-section">
-        <img src="provider-message-1232w___4b6fa.jpg" alt="Doctors working together">
+        <img src="care_team__1_.png" alt="Doctors working together">
         <div class="content-text">
-            <h2>Comprehensive Coverage</h2>
-            <p>Oscar Health provides a variety of plans that cater to your unique needs. Enjoy seamless access to quality care, round-the-clock support, and affordable pricing.</p>
+            <h2>AI-Powered Healthcare Solutions</h2>
+            <p>Revolutionize healthcare with AI-driven tools for precise diagnoses, smart doctor-patient matching, and real-time scheduling. Optimize resources, reduce waiting times, and deliver a seamless healthcare experience for patients and providers.</p>
         </div>
     </section>
     <section class="content-section1">
         <img src="virtual_care.png" alt="Doctors working together">
         <div class="content-text">
-            <h2>Comprehensive Coverage</h2>
-            <p>Oscar Health provides a variety of plans that cater to your unique needs. Enjoy seamless access to quality care, round-the-clock support, and affordable pricing.</p>
+            <h2> Effortless Appointment Management</h2>
+            <p>Streamline the process of finding the right specialist and booking appointments online. With real-time updates and delay estimations, DocSmart ensures convenience and efficiency at every step of the healthcare journey.</p>
         </div>
     </section>
     <footer class="footer">
