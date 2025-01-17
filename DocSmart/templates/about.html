@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocSmart</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/docx.css' %}">
+  <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+</head>
+<body>
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/">
+      <img src="{% static 'images/logo.png' %}" alt="Logo">
+      </a>
+      <span>DocSmart</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#help">Help</a></li>
+    </ul>
+  </nav>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(1.5);
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+           
+            border-radius: 10px;
+            margin: 100px 20px;
+            background-color: transparent;
+            
+        }
+        
+
+        .header {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000000;
+            
+        }
+       
+
+        .sub-header {
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #1a1818;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature-card {
+            background:#c7e5e9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 250px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5em;
+            margin: 15px 0 10px;
+        }
+
+        .feature-card p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .get-started-button {
+            margin-top: 40px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background: #007bff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .get-started-button:hover {
+            background: #0056b3;
+        }
+
+        .additional-section {
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .additional-box {
+            background: #57d9e7;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .additional-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .additional-box h4 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .additional-box p {
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="badal.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <div class="header">Welcome to Our DocSmart website</div>
+        <div class="sub-header">Streamline healthcare with AI-powered solutions</div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <img src="images (7).jpeg.jpg" alt="AI Scheduling">
+                <h3> AI-Powered Diagnosis:</h3>
+                <p>Patients input symptoms.</p> 
+                  <p> AI analyzes the symptoms and diagnoses potential issues.</p> 
+                  <p> AI suggests the right type of doctor based on the diagnosis.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="images (6).jpeg.jpg" alt="Doctor Profiles">
+                <h3>Streamlined Appointments:</h3>
+                <p>Online booking system integrated with doctor schedules.</p>
+                <P> Delay predictions based on historical data to estimate wait times.</P>
+     
+            </div>
+
+            <div class="feature-card">
+                <img src="images (7).jpeg.jpg" alt="24/7 Support">
+                <h3>Long Waiting Times:</h3>
+                <p>Patients often experience delays due to manual appointment processes.</p>
+                <p>Emergency cases add unpredictability, leading to scheduling inefficiencies.</p>
+            </div>
+        </div>
+
+        <button class="get-started-button">Get Started</button>
+
+        <div class="additional-section">
+            <div class="additional-box">
+                <h4>Inefficient Appointment Systems:</h4>
+                <p>Overbooking or underbooking of doctor schedules.</p>
+               
+            </div>
+
+            <div class="additional-box">
+                <h4>Secure Data</h4>
+                <p>Mismanagement causes overcrowding in waiting areas or idle time for doctors.</p>
+            </div>
+
+            <div class="additional-box">
+                <h4>Easy Integration</h4>
+                <p>Integrate with hospital systems effortlessly.</p>
+            </div>
+
+            <div class="additional-box">
+                <h4>24/7 support</h4>
+                <p>Best support for better care.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
