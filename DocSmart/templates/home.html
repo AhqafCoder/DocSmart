@@ -1,11 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocSmart</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/docx.css' %}">
+  <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+       
+
+
+       <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding:0 ;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+           
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem;
+
+        }
+
+        /* Header */
+        .header {
+            background-color: #0033CC;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        
+
+   
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 4rem;
+            background-color: #f4f4f4;
+           
+        }
+
+        .hero-text {
+            max-width: 90%;
+            padding: 80px;
+
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            color: #0033CC;
+            margin-bottom: 2rem;
+            font-family: "Kanit", serif;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 3.5rem;
+            font-family: "Libre Baskerville", serif;
+          
+        }
+
+        button {
+  position: relative;
+  padding: 15px 40px;
+  background: #1f89e1;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  border: 3px solid #1f89e1;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 0.8s ease;
+}
+
+button:hover {
+  background: transparent;
+  color: #4fc8e6;
+  box-shadow: 0 0 25px #4fc8e6;
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #131209);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #131209);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #131209);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #131209);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #131209);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #131209);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #0e0d07;
+}
+
+        .hero img {
+            max-width: 45%;
+            border-radius: 10px;
+        }
+
+        /* Section with Image and Text */
+        .content-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6.5rem;
+        }
+
+        .content-section img {
+            max-width: 45%;
+            border-radius: 10px;
+         
+        }
+
+        .content-text {
+            max-width: 50%;
+           
+        }
+
+        .content-text h2 {
+            font-size: 4rem;
+            color: #0033CC;
+            margin-bottom: 1rem;
+            font-family: "Bona Nova SC", serif;
+        }
+
+        .content-text p {
+            font-size: 1.6rem;
+            color: #555;
+            font-family: "Libre Baskerville", serif;
+        } 
+        .content-section1 {
+            
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:6.5rem;
+    flex-direction: row-reverse; 
+
+} 
+
+        
+
+        /* Footer */
+        .footer {
+            background-color: #0033CC;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: absolute;
+            bottom: 0;
+         width: 100%;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .footer .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .footer .social-links a:hover {
+            color: #FFD700;
+        }
+
+        @media (max-width: 768px) {
+            .hero, .content-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero img, .content-section img {
+                max-width: 100%;
+                margin-top: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    h
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/">
+        <img src="{% static 'images/logo.png' %}" alt="Logo">
+        </a>
+        <span>DocSmart</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'services' %}">Service</a></li>
+        <li><a href="{% url 'home' %}">Help</a></li>
+      </ul>
+    </nav>
+   
+   
+
+    
+    <footer class="footer">
+        <p>&copy; 2025 DocSmart. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    
+    </footer>
 </body>
 </html>
