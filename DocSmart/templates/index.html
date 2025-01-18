@@ -341,8 +341,8 @@ button:hover .star-6 {
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#help">Help</a></li>
+        <li><a href="{% url 'services' %}">Service</a></li>
+        <li><a href="{% url 'home' %}">Help</a></li>
       </ul>
     </nav>
    
@@ -352,7 +352,8 @@ button:hover .star-6 {
         <div class="hero-text">
             <h1>Welcome to DocSmart</h1>
             <p>Gateway to smarter healthcare. Using advanced AI, we connect patients with the right doctors, optimize schedules, and predict delays, ensuring a seamless, efficient, and patient-centered healthcare experience.</p>
-            <button onclick="location.href"='{% url 'login' %}'">
+            <a href="{% url 'login' %}">
+            <button>
                 Get Started
                 <div class="star-1">
                   <svg
@@ -469,6 +470,7 @@ button:hover .star-6 {
                   </svg>
                 </div>
               </button>
+              </a>
         </div>
         <img src="{% static 'images/img1.png' %}" alt="Healthcare illustration">
     </section>
@@ -488,7 +490,7 @@ button:hover .star-6 {
         </div>
     </section>
     <footer class="footer">
-        <p>&copy; 2025 Oscar Health. All rights reserved.</p>
+        <p>&copy; 2025 DocSmart. All rights reserved.</p>
         <div class="social-links">
             <a href="#">Facebook</a>
             <a href="#">Twitter</a>
