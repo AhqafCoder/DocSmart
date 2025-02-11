@@ -18,7 +18,6 @@
 1. **Clone the Repository**  
    ```bash
    git clone https://github.com/yourusername/DocSmart.git
-   cd DocSmart
    ```  
 
 2. **Install Dependencies**  
